@@ -1,0 +1,12 @@
+vllm serve Qwen/Qwen3.5-397B-A17B-GPTQ-Int4 \
+    --tensor-parallel-size 4 \
+    --quantization gptq_marlin \
+    --mm-processor-kwargs '{"videos_kwargs": {"size": {"longest_edge": 469762048, "shortest_edge": 4096}}}' \
+    --limit-mm-per-prompt '{"image": 1024, "video": 10}' \
+    --media-io-kwargs '{"video": {"num_frames": 2048}}' \
+    --mm-encoder-tp-mode data \
+    --mm-processor-cache-type shm \
+    --enable-auto-tool-choice \
+    --tool-call-parser qwen3_coder  \
+    --enable-prefix-caching \
+    --served-model-name "qwen3.5-397b-a17b-int4"
