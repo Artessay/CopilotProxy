@@ -7,9 +7,7 @@ model_list:
       # Drop non-standard params to avoid backend errors
       drop_params: true
 
-      # Thinking effort. Use reasoning_effort (native `thinking` is rejected).
-      # allowed_openai_params is required or drop_params strips it.
-      # Values: low / medium / high / xhigh / max
+      # Thinking effort. Values: low / medium / high / xhigh / max
       allowed_openai_params: ["reasoning_effort"]
       reasoning_effort: "max"
 
@@ -19,7 +17,7 @@ model_list:
         Editor-Plugin-Version: "copilot/1.388.0"
         Copilot-Integration-Id: "vscode-chat"
         User-Agent: "GithubCopilot/1.388.0"
-        
+
         # 1M context (opus[1m])
         anthropic-beta: "context-1m-2025-08-07"
 
@@ -30,3 +28,10 @@ model_list:
 
       # Drop non-standard params to avoid backend errors
       drop_params: true
+
+      # Reasoning effort. Values: none / minimal / low / medium / high / xhigh
+      reasoning_effort: "xhigh"
+      
+    model_info:
+      # gpt-5.5 is only reachable via the Responses API (not /chat/completions)
+      mode: responses
