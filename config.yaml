@@ -1,5 +1,5 @@
 model_list:
-  - model_name: claude-opus-4.8
+  - model_name: claude-opus-4-8
     litellm_params:
       # Backend provider: GitHub Copilot
       model: github_copilot/claude-opus-4.8
@@ -31,7 +31,7 @@ model_list:
 
       # Reasoning effort. Values: none / minimal / low / medium / high / xhigh
       reasoning_effort: "xhigh"
-      
+
     model_info:
       # gpt-5.5 is only reachable via the Responses API (not /chat/completions)
       mode: responses

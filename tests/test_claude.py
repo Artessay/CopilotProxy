@@ -15,7 +15,7 @@ messages = [
 
 start = time.time()
 response = client.chat.completions.create(
-    model="claude-opus-4.8",
+    model="claude-opus-4-8",
     messages=messages,
 )
 print(f"Response costs: {time.time() - start:.2f}s")
