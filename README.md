@@ -16,7 +16,7 @@ uv tool install 'litellm[proxy]'
 ### Start the proxy
 
 ```bash
-litellm --config config.yaml --port 4000
+litellm --config proxy/config.yaml --port 4000
 ```
 
 ## Applications
@@ -31,10 +31,10 @@ npm install -g @anthropic-ai/claude-code
 
 #### Configure
 
-Copy [settings.json](settings.json) from this repo to `~/.claude/settings.json`:
+Copy [claude-code.settings.json](proxy/claude-code.settings.json) from this repo to `~/.claude/settings.json`:
 
 ```bash
-cp settings.json ~/.claude/settings.json
+cp proxy/claude-code.settings.json ~/.claude/settings.json
 ```
 
 
