@@ -16,7 +16,7 @@ uv tool install 'litellm[proxy]'
 ### Start the proxy
 
 ```bash
-litellm --config proxy/config.yaml --port 4000
+litellm --config proxy/config.yaml --host 0.0.0.0 --port 4000
 ```
 
 ## Applications
