@@ -35,3 +35,18 @@ model_list:
     model_info:
       # gpt-5.5 is only reachable via the Responses API (not /chat/completions)
       mode: responses
+
+  - model_name: codex-auto-review
+    litellm_params:
+      # Backend provider: GitHub Copilot
+      model: github_copilot/gpt-5.3-codex
+
+      # Drop non-standard params to avoid backend errors
+      drop_params: true
+
+      # Reasoning effort. Values: none / minimal / low / medium / high / xhigh
+      reasoning_effort: "xhigh"
+
+    model_info:
+      # gpt-5.5 is only reachable via the Responses API (not /chat/completions)
+      mode: responses
