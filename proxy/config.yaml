@@ -29,11 +29,41 @@ model_list:
       # Drop non-standard params to avoid backend errors
       drop_params: true
 
-      # Reasoning effort. Values: none / minimal / low / medium / high / xhigh
+      # Reasoning effort. Values: none / minimal / low / medium / high / xhigh / max
       reasoning_effort: "max"
 
     model_info:
-      # gpt-5.5 is only reachable via the Responses API (not /chat/completions)
+      # gpt is only reachable via the Responses API (not /chat/completions)
+      mode: responses
+
+  - model_name: gpt-5.6-terra
+    litellm_params:
+      # Backend provider: GitHub Copilot
+      model: github_copilot/gpt-5.6-terra
+
+      # Drop non-standard params to avoid backend errors
+      drop_params: true
+
+      # Reasoning effort. Values: none / minimal / low / medium / high / xhigh / max
+      reasoning_effort: "max"
+
+    model_info:
+      # gpt is only reachable via the Responses API (not /chat/completions)
+      mode: responses
+
+  - model_name: gpt-5.6-luna
+    litellm_params:
+      # Backend provider: GitHub Copilot
+      model: github_copilot/gpt-5.6-luna
+
+      # Drop non-standard params to avoid backend errors
+      drop_params: true
+
+      # Reasoning effort. Values: none / minimal / low / medium / high / xhigh / max
+      reasoning_effort: "max"
+
+    model_info:
+      # gpt is only reachable via the Responses API (not /chat/completions)
       mode: responses
 
   - model_name: codex-auto-review
@@ -45,8 +75,8 @@ model_list:
       drop_params: true
 
       # Reasoning effort. Values: none / minimal / low / medium / high / xhigh
-      reasoning_effort: "xhigh"
+      reasoning_effort: "max"
 
     model_info:
-      # gpt-5.5 is only reachable via the Responses API (not /chat/completions)
+      # gpt is only reachable via the Responses API (not /chat/completions)
       mode: responses
