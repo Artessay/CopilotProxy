@@ -43,3 +43,26 @@ cp proxy/claude-code.settings.json ~/.claude/settings.json
 ```bash
 claude
 ```
+
+### Use with Codex
+
+#### Install
+
+```bash
+npm install -g @openai/codex
+```
+
+#### Configure
+
+Copy [codex.config.toml](proxy/codex.config.toml) from this repo to `~/.codex/config.toml`:
+
+```bash
+cp proxy/codex.config.toml ~/.codex/config.toml
+```
+
+#### Run
+
+```bash
+codex
+```
+

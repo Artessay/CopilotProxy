@@ -1,0 +1,11 @@
+model = "gpt-5.6-sol"
+model_provider = "litellm"
+
+sandbox_mode = "workspace-write"
+approval_policy = "on-request"
+approvals_reviewer = "auto_review"
+
+[model_providers.litellm]
+name = "Local LiteLLM"
+base_url = "http://127.0.0.1:4000/v1"
+wire_api = "responses"
