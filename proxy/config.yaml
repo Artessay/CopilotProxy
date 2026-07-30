@@ -1,8 +1,8 @@
 model_list:
-  - model_name: claude-opus-4-8
+  - model_name: claude-opus-5
     litellm_params:
       # Backend provider: GitHub Copilot
-      model: github_copilot/claude-opus-4.8
+      model: github_copilot/claude-opus-5
 
       # Drop non-standard params to avoid backend errors
       drop_params: true
