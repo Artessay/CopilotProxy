@@ -33,3 +33,25 @@ mutagen forward terminate <session-name>
 
 ### Sync
 
+Sync
+
+```bash
+mutagen sync create \
+  --name <session-name> \
+  --mode two-way-safe \
+  --ignore-vcs \
+  <local_folder_path> \
+  <remote_machine>:<remote_path>
+```
+
+Show sync
+
+```bash
+mutagen sync list
+```
+
+Terminate sync
+
+```bash
+mutagen sync terminate <session-name>
+```
