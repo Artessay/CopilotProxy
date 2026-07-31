@@ -44,6 +44,18 @@ mutagen sync create \
   <remote_machine>:<remote_path>
 ```
 
+Monitor
+
+```bash
+mutagen sync monitor <session-name>
+```
+
+Flush
+
+```bash
+mutagen sync flush <session-name>
+```
+
 Show sync
 
 ```bash
