@@ -1,25 +1,25 @@
 model_list:
-  - model_name: claude-opus-5
-    litellm_params:
-      # Backend provider: GitHub Copilot
-      model: github_copilot/claude-opus-5
+  # - model_name: claude-opus-5
+  #   litellm_params:
+  #     # Backend provider: GitHub Copilot
+  #     model: github_copilot/claude-opus-5
 
-      # Drop non-standard params to avoid backend errors
-      drop_params: true
+  #     # Drop non-standard params to avoid backend errors
+  #     drop_params: true
 
-      # Thinking effort. Values: low / medium / high / xhigh / max
-      allowed_openai_params: ["reasoning_effort"]
-      reasoning_effort: "max"
+  #     # Thinking effort. Values: low / medium / high / xhigh / max
+  #     allowed_openai_params: ["reasoning_effort"]
+  #     reasoning_effort: "max"
 
-      # Editor-client headers so Copilot responds
-      extra_headers:
-        Editor-Version: "vscode/1.106.3"
-        Editor-Plugin-Version: "copilot/1.388.0"
-        Copilot-Integration-Id: "vscode-chat"
-        User-Agent: "GithubCopilot/1.388.0"
+  #     # Editor-client headers so Copilot responds
+  #     extra_headers:
+  #       Editor-Version: "vscode/1.106.3"
+  #       Editor-Plugin-Version: "copilot/1.388.0"
+  #       Copilot-Integration-Id: "vscode-chat"
+  #       User-Agent: "GithubCopilot/1.388.0"
 
-        # 1M context (opus[1m])
-        anthropic-beta: "context-1m-2025-08-07"
+  #       # 1M context (opus[1m])
+  #       anthropic-beta: "context-1m-2025-08-07"
 
   - model_name: gpt-5.6-sol
     litellm_params:
