@@ -1,82 +1,17 @@
 model_list:
-  # - model_name: claude-opus-5
-  #   litellm_params:
-  #     # Backend provider: GitHub Copilot
-  #     model: github_copilot/claude-opus-5
-
-  #     # Drop non-standard params to avoid backend errors
-  #     drop_params: true
-
-  #     # Thinking effort. Values: low / medium / high / xhigh / max
-  #     allowed_openai_params: ["reasoning_effort"]
-  #     reasoning_effort: "max"
-
-  #     # Editor-client headers so Copilot responds
-  #     extra_headers:
-  #       Editor-Version: "vscode/1.106.3"
-  #       Editor-Plugin-Version: "copilot/1.388.0"
-  #       Copilot-Integration-Id: "vscode-chat"
-  #       User-Agent: "GithubCopilot/1.388.0"
-
-  #       # 1M context (opus[1m])
-  #       anthropic-beta: "context-1m-2025-08-07"
-
-  - model_name: gpt-5.6-sol
+  - model_name: deepseek-v4-flash
     litellm_params:
-      # Backend provider: GitHub Copilot
-      model: github_copilot/gpt-5.6-sol
+      model: openai/deepseek-v4-flash-0731
+      api_base: http://123.57.228.132:8286/api
+      api_key: os.environ/WEBUI_API_KEY
+      use_chat_completions_api: true
 
-      # Drop non-standard params to avoid backend errors
-      drop_params: true
-
-      # Reasoning effort. Values: none / minimal / low / medium / high / xhigh / max
-      reasoning_effort: "max"
-
-    model_info:
-      # gpt is only reachable via the Responses API (not /chat/completions)
-      mode: responses
-
-  - model_name: gpt-5.6-terra
+  - model_name: deepseek-v4-pro
     litellm_params:
-      # Backend provider: GitHub Copilot
-      model: github_copilot/gpt-5.6-terra
+      model: openai/deepseek-v4-pro
+      api_base: http://123.57.228.132:8286/api
+      api_key: os.environ/WEBUI_API_KEY
+      use_chat_completions_api: true
 
-      # Drop non-standard params to avoid backend errors
-      drop_params: true
-
-      # Reasoning effort. Values: none / minimal / low / medium / high / xhigh / max
-      reasoning_effort: "max"
-
-    model_info:
-      # gpt is only reachable via the Responses API (not /chat/completions)
-      mode: responses
-
-  - model_name: gpt-5.6-luna
-    litellm_params:
-      # Backend provider: GitHub Copilot
-      model: github_copilot/gpt-5.6-luna
-
-      # Drop non-standard params to avoid backend errors
-      drop_params: true
-
-      # Reasoning effort. Values: none / minimal / low / medium / high / xhigh / max
-      reasoning_effort: "max"
-
-    model_info:
-      # gpt is only reachable via the Responses API (not /chat/completions)
-      mode: responses
-
-  - model_name: codex-auto-review
-    litellm_params:
-      # Backend provider: GitHub Copilot
-      model: github_copilot/gpt-5.3-codex
-
-      # Drop non-standard params to avoid backend errors
-      drop_params: true
-
-      # Reasoning effort. Values: none / minimal / low / medium / high / xhigh
-      reasoning_effort: "max"
-
-    model_info:
-      # gpt is only reachable via the Responses API (not /chat/completions)
-      mode: responses
+general_settings:
+  enable_responses_api_to_chat_completions_translation: true

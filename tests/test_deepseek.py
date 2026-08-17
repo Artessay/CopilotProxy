@@ -15,7 +15,7 @@ messages = [
 
 start = time.time()
 response = client.responses.create(
-    model="gpt-5.6-terra",
+    model="deepseek-v4-flash",
     input=messages,
 )
 print(f"Response costs: {time.time() - start:.2f}s")
