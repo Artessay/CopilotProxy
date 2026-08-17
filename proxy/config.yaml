@@ -1,17 +1,19 @@
 model_list:
-  - model_name: deepseek-v4-flash
+  - &defaults
     litellm_params:
-      model: openai/deepseek-v4-flash-0731
-      api_base: http://123.57.228.132:8286/api
+      api_base: os.environ/WEBUI_BASE_URL
       api_key: os.environ/WEBUI_API_KEY
       use_chat_completions_api: true
 
+  - model_name: deepseek-v4-flash
+    <<: *defaults
+    litellm_params:
+      model: openai/deepseek-v4-flash-0731
+
   - model_name: deepseek-v4-pro
+    <<: *defaults
     litellm_params:
       model: openai/deepseek-v4-pro
-      api_base: http://123.57.228.132:8286/api
-      api_key: os.environ/WEBUI_API_KEY
-      use_chat_completions_api: true
 
 general_settings:
   enable_responses_api_to_chat_completions_translation: true

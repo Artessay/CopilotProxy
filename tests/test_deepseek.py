@@ -16,6 +16,7 @@ messages = [
 start = time.time()
 response = client.responses.create(
     model="deepseek-v4-flash",
+    # model="deepseek-v4-pro",
     input=messages,
 )
 print(f"Response costs: {time.time() - start:.2f}s")
