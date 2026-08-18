@@ -4,14 +4,24 @@ model_list:
       model: openai/deepseek-v4-flash-0731
       api_base: os.environ/WEBUI_BASE_URL
       api_key: os.environ/WEBUI_API_KEY
+
+      # Use the Chat Completions API instead of the Responses API for this model
       use_chat_completions_api: true
+
+      # Drop non-standard params to avoid backend errors
+      drop_params: true
 
   - model_name: deepseek-v4-pro
     litellm_params:
       model: openai/deepseek-v4-pro
       api_base: os.environ/WEBUI_BASE_URL
       api_key: os.environ/WEBUI_API_KEY
+
+      # Use the Chat Completions API instead of the Responses API for this model
       use_chat_completions_api: true
+
+      # Drop non-standard params to avoid backend errors
+      drop_params: true
 
 general_settings:
   enable_responses_api_to_chat_completions_translation: true
