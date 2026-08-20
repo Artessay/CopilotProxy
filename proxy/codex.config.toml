@@ -1,6 +1,8 @@
 model = "gpt-5.6-sol"
 model_provider = "litellm"
 
+# model_catalog_json = "~/.codex/models.json"
+
 sandbox_mode = "workspace-write"
 approval_policy = "on-request"
 approvals_reviewer = "auto_review"

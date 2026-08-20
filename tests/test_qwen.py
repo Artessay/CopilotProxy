@@ -3,12 +3,15 @@ from openai import OpenAI
 
 client = OpenAI(
     api_key="EMPTY",
-    base_url="http://localhost:8000/v1",
+    base_url="http://localhost:4000/v1",
+    # base_url="http://localhost:8000/v1",
 )
 
 # model_name = "qwen3.5-9b"
-model_name = "qwen3.5-122b-a10b"
+# model_name = "qwen3.5-122b-a10b"
 # model_name = "qwen3.5-397b-a17b-int4"
+
+model_name = "qwen3.7-plus"
 
 messages = [
     {
